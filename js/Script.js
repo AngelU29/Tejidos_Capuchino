@@ -1,3 +1,5 @@
+console.log("Script.js cargado ✅");
+
 // Abre/cierra la carta
 function abrirCarta() {
   document.getElementById('carta').classList.toggle('abierta');
