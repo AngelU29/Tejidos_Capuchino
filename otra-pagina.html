@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Encuesta Tejidos Capuchino</title>
+  <link rel="stylesheet" href="css/encuesta.css" />
+</head>
+<body>
+
+  <div class="encuesta-container">
+    <h1>Encuesta Tejidos Capuchino</h1>
+    <form id="formEncuesta">
+      
+      <label for="q1">1. ¿Cómo conociste Tejidos Capuchino?</label>
+      <input type="text" id="q1" name="q1" required />
+
+      <label for="q2">2. ¿Qué opinas de la calidad de nuestros amigurumis?</label>
+      <textarea id="q2" name="q2" rows="2" required></textarea>
+
+      <label for="q3">3. ¿Qué tan satisfecho(a) estás con los diseños que ofrecemos?</label>
+      <select id="q3" name="q3" required>
+        <option value="">Selecciona...</option>
+        <option value="1">1 – Muy insatisfecho</option>
+        <option value="2">2</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4</option>
+        <option value="5">5 – Muy satisfecho</option>
+      </select>
+
+      <label for="q4">4. ¿Qué personaje o figura te gustaría ver en nuestros próximos amigurumis?</label>
+      <input type="text" id="q4" name="q4" required />
+
+      <label for="q5">5. ¿Cómo calificarías la relación calidad-precio de nuestros productos?</label>
+      <select id="q5" name="q5" required>
+        <option value="">Selecciona...</option>
+        <option value="Excelente">Excelente</option>
+        <option value="Buena">Buena</option>
+        <option value="Regular">Regular</option>
+        <option value="Mala">Mala</option>
+      </select>
+
+      <label for="q6">6. ¿Qué te transmite nuestra marca (confianza, ternura, creatividad, etc.)?</label>
+      <textarea id="q6" name="q6" rows="2" required></textarea>
+
+      <label>7. ¿Recomendarías Tejidos Capuchino a tus amigos o familiares?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="q7" value="Sí" required /> Sí</label>
+        <label><input type="radio" name="q7" value="No" /> No</label>
+      </div>
+
+      <label for="q8">8. ¿Qué tan fácil fue para ti navegar en nuestra página web y encontrar lo que buscabas?</label>
+      <select id="q8" name="q8" required>
+        <option value="">Selecciona...</option>
+        <option value="Muy fácil">Muy fácil</option>
+        <option value="Fácil">Fácil</option>
+        <option value="Difícil">Difícil</option>
+        <option value="Muy difícil">Muy difícil</option>
+      </select>
+
+      <label>9. ¿Preferirías personalizar tu amigurumi (colores, accesorios, tamaño)?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="q9" value="Sí" required /> Sí</label>
+        <label><input type="radio" name="q9" value="No" /> No</label>
+      </div>
+
+      <label for="q10">10. ¿Qué sugerencia nos darías para mejorar nuestros productos o servicio?</label>
+      <textarea id="q10" name="q10" rows="2" required></textarea>
+
+      <button type="submit">Enviar encuesta</button>
+    </form>
+  </div>
+
+  <script src="js/encuesta.js" defer></script>
+</body>
+</html>

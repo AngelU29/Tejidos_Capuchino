@@ -7,12 +7,10 @@
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
-
   <div class="carta" id="carta">
-    <div class="sello" onclick="abrirCarta()"></div>
+    <div class="sello"></div>
 
     <div class="contenido">
-      <!-- Cabecera dentro de la carta -->
       <header class="cabecera">
         <div class="logo-title">
           <img src="assets/Tejidos_Capuchino_icon.png" alt="Logo" class="logo-img" />
@@ -23,24 +21,21 @@
           <button onclick="togglePanel('vision')">Visión</button>
           <button onclick="togglePanel('valores')">Valores</button>
           <button onclick="togglePanel('foda')">Análisis FODA</button>
-          <button class="nav-btn" onclick="location.href='otra-pagina.html'">Ir a otra página</button>
+          <button class="nav-btn" onclick="location.href='otra-pagina.html'">
+            Ir a otra página
+          </button>
         </nav>
       </header>
 
-      <!-- Paneles ocultos -->
       <div class="panel-wrapper">
         <section id="mision" class="panel">
           <h2>🧶 Misión</h2>
-          <p>Crear amigurumis tejidos con dedicación y creatividad, ofreciendo piezas únicas
-            que transmitan ternura, calidad y calidez artesanal, llevando alegría a grandes y chicos.
-          </p>
+          <p>Crear amigurumis tejidos con dedicación y creatividad, ofreciendo piezas únicas que transmitan ternura, calidad y calidez artesanal, llevando alegría a grandes y chicos.</p>
         </section>
 
         <section id="vision" class="panel">
           <h2>🏁 Visión</h2>
-          <p>Ser reconocidos a nivel nacional como la marca líder en amigurumis artesanales,
-            distinguidos por originalidad, excelencia en detalle y compromiso sostenible.
-          </p>
+          <p>Ser reconocidos a nivel nacional como la marca líder en amigurumis artesanales, distinguidos por originalidad, excelencia en detalle y compromiso sostenible.</p>
         </section>
 
         <section id="valores" class="panel">
@@ -104,6 +99,21 @@
           </table>
         </section>
       </div>
+
+      <footer class="pie">
+        <form id="formSugerencias">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" required />
+
+          <label for="mensaje">Queja / Sugerencia</label>
+          <textarea id="mensaje" name="mensaje" rows="3" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </footer>
     </div>
   </div>
 

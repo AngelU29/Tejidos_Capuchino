@@ -1,14 +1,13 @@
-/* ─── BODY & CENTRADO ────────────────────────────────── */
+/* ─── GLOBAL ─────────────────────────────────────────── */
 body {
-  background-color: #f4f0e6;
-  font-family: 'Georgia', serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  font-family: 'Georgia', serif;
+  background-color: #f4f0e6;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: auto;
+  min-height: 100vh;
 }
 
 /* ─── CARTA ─────────────────────────────────────────── */
@@ -16,7 +15,7 @@ body {
   position: relative;
   width: 320px;
   height: 220px;
-  background-color: #fff;
+  background: #fff;
   border: 2px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
@@ -24,32 +23,41 @@ body {
   transition: width 0.8s ease, height 0.8s ease;
 }
 
+/* sello encima de todo */
 .sello {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px; height: 80px;
+  width: 80px;
+  height: 80px;
   background-image: url('../assets/Tejidos_Capuchino_icon.png');
   background-size: cover;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 3;
   transition: opacity 0.8s ease;
 }
 
+/* ─── CONTENIDO FLEX ────────────────────────────────── */
 .contenido {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   opacity: 0;
   padding: 20px;
-  transition: opacity 1s ease;
   box-sizing: border-box;
-  height: 100%;
+  transition: opacity 0.6s ease;
   pointer-events: none;
+  z-index: 1;
 }
 
+/* al abrir la carta */
 .carta.abierta {
   width: 100vw;
   height: 100vh;
   border-radius: 0;
-  
 }
 
 .carta.abierta .sello {
@@ -67,10 +75,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #ccc; /* aumentado */
+  height: 100px;               /* altura del header */
+  padding: 0 20px;
   background-color: #f4ccf8;
+  border-bottom: 3px solid #ccc;
 }
 
 .logo-title {
@@ -88,6 +96,9 @@ body {
 .Titulo {
   margin: 0;
   font-size: 1.4rem;
+  background-color: #f4ccf8;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .botones-header {
@@ -102,7 +113,7 @@ body {
   border: 2px solid #ccc;
   border-radius: 6px;
   padding: 6px 14px;
-  font-family: 'Georgia', serif;
+  font-family: inherit;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -114,16 +125,20 @@ body {
 
 /* ─── PANEL WRAPPER & PANELS ───────────────────────── */
 .panel-wrapper {
-  max-height: calc(100% - 100px);
+  flex: 1;
   overflow-y: auto;
+  margin: 10px 0;
+  padding-right: 5px;
 }
 
 .panel {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.6s ease, padding 0.6s ease;
+  background-color: #f4ccf8;
+  border-radius: 8px;
+  margin-bottom: 12px;
   padding: 0 10px;
-  margin-bottom: 10px;
 }
 
 .panel.open {
@@ -136,7 +151,8 @@ body {
   width: 100%;
   border-collapse: collapse;
   box-shadow: 0 0 6px rgba(0,0,0,0.1);
-  margin-top: 8px;
+  background: #fff;
+  margin-bottom: 10px;
 }
 
 .FODA th,
@@ -148,4 +164,45 @@ body {
 
 .FODA th {
   background-color: #f3acfa;
+}
+
+/* ─── FOOTER DE SUGERENCIAS ────────────────────────── */
+.pie {
+  flex-shrink: 0;
+  background-color: #f3acfa;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.pie form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pie label {
+  font-size: 0.9rem;
+}
+
+.pie input,
+.pie textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.pie button {
+  align-self: flex-end;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pie button:hover {
+  background-color: #f4ccf8;
 }
