@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tejidos Capuchino</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <div class="carta" id="carta">
+    <div class="sello" onclick="abrirCarta()"></div>
+
+    <div class="contenido">
+      <!-- Cabecera dentro de la carta -->
+      <header class="cabecera">
+        <div class="logo-title">
+          <img src="assets/Tejidos_Capuchino_icon.png" alt="Logo" class="logo-img" />
+          <h1 class="Titulo">Tejidos Capuchino</h1>
+        </div>
+        <nav class="botones-header">
+          <button onclick="togglePanel('mision')">Misión</button>
+          <button onclick="togglePanel('vision')">Visión</button>
+          <button onclick="togglePanel('valores')">Valores</button>
+          <button onclick="togglePanel('foda')">Análisis FODA</button>
+          <button class="nav-btn" onclick="location.href='otra-pagina.html'">Ir a otra página</button>
+        </nav>
+      </header>
+
+      <!-- Paneles ocultos -->
+      <div class="panel-wrapper">
+        <section id="mision" class="panel">
+          <h2>🧶 Misión</h2>
+          <p>Crear amigurumis tejidos con dedicación y creatividad, ofreciendo piezas únicas
+            que transmitan ternura, calidad y calidez artesanal, llevando alegría a grandes y chicos.
+          </p>
+        </section>
+
+        <section id="vision" class="panel">
+          <h2>🏁 Visión</h2>
+          <p>Ser reconocidos a nivel nacional como la marca líder en amigurumis artesanales,
+            distinguidos por originalidad, excelencia en detalle y compromiso sostenible.
+          </p>
+        </section>
+
+        <section id="valores" class="panel">
+          <h2>❤ Valores</h2>
+          <ul>
+            <li>Honestidad</li>
+            <li>Respeto</li>
+            <li>Responsabilidad</li>
+            <li>Trabajo en equipo</li>
+            <li>Solidaridad</li>
+            <li>Pasión artesanal</li>
+            <li>Calidez humana</li>
+          </ul>
+        </section>
+
+        <section id="foda" class="panel">
+          <h2>Análisis FODA</h2>
+          <table class="FODA">
+            <tr>
+              <th>Fortalezas</th>
+              <th>Oportunidades</th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Únicos y personalizados</li>
+                  <li>Alta calidad</li>
+                  <li>Diferenciación artesanal</li>
+                  <li>Identidad tierna</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Interés en sostenibilidad</li>
+                  <li>Mercados digitales</li>
+                  <li>Alianzas estratégicas</li>
+                  <li>Personalización</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Debilidades</th>
+              <th>Amenazas</th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Producción limitada</li>
+                  <li>Costo artesanal</li>
+                  <li>Reconocimiento inicial</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Competencia industrial</li>
+                  <li>Inflación de insumos</li>
+                  <li>Tendencias cambiantes</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/Script.js"></script>
+</body>
+</html>
