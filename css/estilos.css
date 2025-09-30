@@ -42,12 +42,14 @@ body {
   transition: opacity 1s ease;
   box-sizing: border-box;
   height: 100%;
+  pointer-events: none;
 }
 
 .carta.abierta {
   width: 100vw;
   height: 100vh;
   border-radius: 0;
+  
 }
 
 .carta.abierta .sello {
@@ -57,6 +59,7 @@ body {
 
 .carta.abierta .contenido {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* ─── CABECERA ─────────────────────────────────────── */
@@ -67,6 +70,7 @@ body {
   margin-bottom: 15px;
   padding-bottom: 10px;
   border-bottom: 3px solid #ccc; /* aumentado */
+  background-color: #f4ccf8;
 }
 
 .logo-title {

@@ -1,4 +1,4 @@
-console.log("Script.js cargado ✅");
+
 
 // Abre/cierra la carta
 function abrirCarta() {
