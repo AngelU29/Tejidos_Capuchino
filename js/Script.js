@@ -6,7 +6,7 @@ function abrirCarta() {
 
 // mostrar/ocultar paneles
 function togglePanel(id) {
-  ['mision','vision','valores','foda'].forEach(pid => {
+  ['mision','vision','valores','foda','objetivos'].forEach(pid => {
     document.getElementById(pid).classList.remove('open');
   });
   document.getElementById(id).classList.toggle('open');
@@ -28,3 +28,5 @@ form.addEventListener('submit', function(e) {
     sello.addEventListener('click', abrirCarta);
   }
 });
+
+

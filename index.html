@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
+  
+
   <div class="carta" id="carta">
     <div class="sello"></div>
 
@@ -21,12 +23,15 @@
           <button onclick="togglePanel('vision')">Visión</button>
           <button onclick="togglePanel('valores')">Valores</button>
           <button onclick="togglePanel('foda')">Análisis FODA</button>
+          <!--Boton nuevo-->
+          <button onclick="togglePanel('objetivos')">Objetivos</button>
+
           <button class="nav-btn" onclick="location.href='otra-pagina.html'">
             Encuesta:D
           </button>
         </nav>
       </header>
-
+      
       <div class="panel-wrapper">
         <section id="mision" class="panel">
           <h2>🧶 Misión</h2>
@@ -98,8 +103,47 @@
             </tr>
           </table>
         </section>
-      </div>
+        <section id="objetivos" class="panel">
+  <h2>🎯 Objetivos</h2>
+  <ul>
+    <li>Aumentar las ventas online en un 30% durante el próximo semestre, aprovechando el crecimiento del mercado de productos artesanales y la alta valoración de los amigurumis personalizados.</li>
+    <li>Reducir los costos de materiales en un 15% durante el próximo año, mediante la optimización de la cadena de suministro y la negociación con proveedores locales.</li>
+    <li>Incrementar en un 25% el número de pedidos personalizados en el próximo trimestre, ofreciendo a los clientes la posibilidad de diseñar sus propios amigurumis a través de una herramienta interactiva en la página web.</li>
+    <li>Aumentar la base de clientes en un 20% en el próximo semestre, enfocándose en mujeres y hombres de entre 18 y 45 años interesados en artículos personalizados y ecológicos.</li>
+    <li>Reducir el tiempo de producción por amigurumi en un 10% en el próximo trimestre, mediante la implementación de técnicas de producción más eficientes y la capacitación del personal.</li>
+    <li>Introducir al menos tres nuevos productos complementarios (llaveros, imanes, adornos) en los próximos seis meses, utilizando materiales reciclados y diseños innovadores.</li>
+    <li>Aumentar la satisfacción del cliente en un 15% en el próximo trimestre, mediante la implementación de un sistema de encuestas de satisfacción y la mejora de los tiempos de respuesta a las consultas y pedidos.</li>
+  </ul>
+</section>
 
+      </div>
+      <!--Productos-->
+              <div class="productos">
+              <div class="producto">
+                <img src="assets/Amigurumi1.jpeg" alt="Amigurumi Juanin" />
+                <div class="info">
+                  <h3>Amigurumi Juanin</h3>
+                  <p>Precio: $499</p>
+                </div>
+              </div>
+
+              <div class="producto">
+                <img src="assets/Amigurumi2.jpeg" alt="Amigurumi Rosita" />
+                <div class="info">
+                  <h3>Amigurumi Rosita</h3>
+                  <p>Precio: $549</p>
+                </div>
+              </div>
+
+              <div class="producto">
+                <img src="assets/Amigurumi3.jpeg" alt="Amigurumi Capuchino" />
+                <div class="info">
+                  <h3>Amigurumi Capuchino</h3>
+                  <p>Precio: $599</p>
+                </div>
+              </div>
+            </div>
+            <!--Fin de productos-->
       <footer class="pie">
         <form id="formSugerencias">
           <label for="nombre">Nombre</label>

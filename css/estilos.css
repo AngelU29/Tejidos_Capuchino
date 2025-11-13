@@ -3,11 +3,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Georgia', serif;
-  background-color: #f4f0e6;
+  background-image: url('../assets/close-up-wool-texture-design.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+
+  /*background-color: #f4f0e6;*/
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-y: auto;
 }
 
 /* ─── CARTA ─────────────────────────────────────────── */
@@ -56,9 +61,11 @@ body {
 /* al abrir la carta */
 .carta.abierta {
   width: 100vw;
-  height: 100vh;
+  height: auto;              /* ← permite que crezca según el contenido */
+  min-height: 100vh;         /* ← asegura que al menos ocupe toda la pantalla */
   border-radius: 0;
 }
+
 
 .carta.abierta .sello {
   opacity: 0;
@@ -123,12 +130,30 @@ body {
   background-color: #f4ccf8;
 }
 
+/*Objetivos*/
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, padding 0.6s ease;
+  background-color: #f4ccf8;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 0 10px;
+}
+
+.panel.open {
+  max-height: 800px;
+  padding: 10px;
+}
+
 /* ─── PANEL WRAPPER & PANELS ───────────────────────── */
 .panel-wrapper {
   flex: 1;
-  overflow-y: auto;
+  /*overflow-y: auto;*/
   margin: 10px 0;
   padding-right: 5px;
+  overflow-y: visible;       /* ← permite que crezca con el contenido */
+  max-height: none;          /* ← elimina límite de altura */
 }
 
 .panel {
@@ -205,4 +230,45 @@ body {
 
 .pie button:hover {
   background-color: #f4ccf8;
+}
+
+/* ─── PRODUCTOS ─────────────────────────────────────── */
+.productos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.producto {
+  width: 180px;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.producto .info {
+  margin-top: 10px;
+}
+
+.producto h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.producto p {
+  margin: 4px 0 0;
+  font-weight: bold;
+  color: #555;
 }
